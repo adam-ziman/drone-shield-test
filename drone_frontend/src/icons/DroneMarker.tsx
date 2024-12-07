@@ -1,4 +1,4 @@
-const DroneMarkerIcom = () => {
+const DroneMarkerIcon = () => {
 	return (
 		<svg
 			width='32px'
@@ -30,4 +30,4 @@ const DroneMarkerIcom = () => {
 	)
 }
 
-export default DroneMarkerIcom
+export default DroneMarkerIcon
