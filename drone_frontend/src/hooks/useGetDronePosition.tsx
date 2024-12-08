@@ -23,7 +23,10 @@ export const useGetDronePosition = () => {
 
 		websocket.onerror = () => {
 			console.log('Web socket failed')
-			alert('Unable to load data please refresh page!')
+		}
+
+		return () => {
+			websocket.close()
 		}
 	}, [setPosition])
 
