@@ -2,9 +2,9 @@ import { MapContainer, Polyline, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 
 import { MarkerLayer, Marker } from 'react-leaflet-marker'
-import DroneMarker from './icons/DroneMarker'
-import { useGetDroneTrackingLine } from './hooks/useGetDroneTrackingLine'
-import { useGetDronePosition } from './hooks/useGetDronePosition'
+import DroneMarker from '../icons/DroneMarker'
+import { useGetDroneTrackingLine } from '../hooks/useGetDroneTrackingLine'
+import { useGetDronePosition } from '../hooks/useGetDronePosition'
 
 const mapStyles = {
 	height: 'calc(100vh)',
