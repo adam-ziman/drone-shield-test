@@ -3,7 +3,10 @@ import { throttle } from '../utils/throttle'
 import type { Position } from '../types'
 
 export const useGetDronePosition = () => {
-	const [position, setPosition] = useState<Position>({ lat: 0, lng: 0 })
+	const [position, setPosition] = useState<Position>({
+		lat: -33.946765,
+		lng: 151.1796423,
+	})
 	useEffect(() => {
 		const websocket = new WebSocket('ws://localhost:8080/')
 
@@ -18,8 +21,9 @@ export const useGetDronePosition = () => {
 			}, 500)()
 		}
 
-		websocket.onerror = (event) => {
-			// Do something
+		websocket.onerror = () => {
+			console.log('Web socket failed')
+			alert('Unable to load data please refresh page!')
 		}
 	}, [setPosition])
 

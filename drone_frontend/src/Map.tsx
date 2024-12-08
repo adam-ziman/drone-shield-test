@@ -21,18 +21,15 @@ const Map = () => {
 			zoom={14}
 			scrollWheelZoom={false}
 			style={mapStyles}
-			data-testId='map'
+			data-testid='map'
 		>
 			<TileLayer
 				attribution=''
 				url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 			/>
 			<MarkerLayer>
-				<Marker
-					data-testId='drone-marker'
-					position={[dronePosition.lat, dronePosition.lng]}
-				>
-					<DroneMarker />
+				<Marker position={[dronePosition.lat, dronePosition.lng]}>
+					<DroneMarker data-testid='drone-marker' />
 				</Marker>
 			</MarkerLayer>
 			<Polyline pathOptions={lineOptions} positions={trackingLine} />
