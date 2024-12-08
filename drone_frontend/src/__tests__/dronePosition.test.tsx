@@ -20,7 +20,7 @@ describe('Drone marker', () => {
 
 describe('useGetDronePosition', () => {
 	test('Drone marker is rendered', () => {
-		const expectedValue = { lat: 0, lng: 0 }
+		const expectedValue = { lat: -33.946765, lng: 151.1796423 }
 		WebSocketMock().onmessage.mockReturnValue(() => expectedValue)
 
 		const { result } = renderHook(() => useGetDronePosition())
